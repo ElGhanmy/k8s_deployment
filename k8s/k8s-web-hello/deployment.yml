@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloApp
+  name: hellok8s
 spec:
   selector:
     matchLabels:
-      app: helloApp
+      app: hellok8s
   template:
     metadata:
       labels:
-        app: helloApp
+        app: hellok8s
     spec:
       containers:
-      - name: helloApp
+      - name: hellok8s
         image: ghanmi/k8s-training:v1
         resources:
           limits:
