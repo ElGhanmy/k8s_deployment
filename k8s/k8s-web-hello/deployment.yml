@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloApp
+spec:
+  selector:
+    matchLabels:
+      app: helloApp
+  template:
+    metadata:
+      labels:
+        app: helloApp
+    spec:
+      containers:
+      - name: helloApp
+        image: ghanmi/k8s-training:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
